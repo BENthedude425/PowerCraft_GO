@@ -16,8 +16,23 @@ func main() {
 	// Create a HTTP multiplexer to handle requests to paths
 	mux := http.NewServeMux()
 
+	//
 	// Add handlers for paths
+	//
 
+	// Handle requests to the API
+	mux.HandleFunc("/api", func(w http.ResponseWriter, req *http.Request) {
+		// The "/api" pattern matches everything, so we handle specific
+		// paths here that we're at the root here.
+		if req.URL.Path == "/api/test" {
+			fmt.Fprintf(w, "test successful",)
+		} else {
+			http.NotFound(w, req)
+			return
+		}
+	})
+
+	// Handle requests to the root by returning the UI
 	mux.Handle("/", http.FileServer(http.FS(ui)))
 
 	// Start the webserver
