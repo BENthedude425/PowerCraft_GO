@@ -8,7 +8,7 @@ body, html{
     box-sizing: border-box;
   }
     .login-background-image{
-        background-image: url("background2.png");
+        background-image: url("../img/background2.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

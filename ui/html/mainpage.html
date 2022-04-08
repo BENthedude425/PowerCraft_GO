@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" type="text/css" href="panel.css"/>
-    <script src="sidenav.js"></script>
-    <script src="API.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/panel.css"/>
+    <script src="../js/sidenav.js"></script>
+    <script src="../js/API.js"></script>
 
     <body onload="FirstRequest(); HideElements('SideNav')" class="panel-background">
         <div class="panel">
 
             <div id="SideNav" class="sidenav">
                 <div onclick="SideNavSelect('Console')" id="Console">
-                    <img src="console.png"/>
+                    <img src="../img/console.png"/>
                 </div>
                 <div onclick="SideNavSelect('Settings')" id="Settings">
-                    <img src="settings.png">
+                    <img src="../img/settings.png">
                 </div>
             </div>
 
@@ -23,11 +23,11 @@
                     <div class="Console"><div id="ConsoleText"></div></div>
                     <input class="ConsoleInput" type="text" value=">">
                     
-                    <button onclick="ServerAPI('MCcommand=Start')" class="ServerButton" id="StartButton" style="background-color: var(--color-success,#1FD78D);"><img src="power.png"/><b>Start</b>
+                    <button onclick="ServerAPI('MCcommand=Start')" class="ServerButton" id="StartButton" style="background-color: var(--color-success,#1FD78D);"><img src="../img/power.png"/><b>Start</b>
                     </button>
 
                     <button onclick="ServerAPI('MCcommand=Stop')" class="ServerButton" style="background-color: var(--color-danger,#F62451);">
-                        <img src="power.png"/><b>Stop</b>
+                        <img src="../img/power.png"/><b>Stop</b>
                     </button>
 
                 </div>
