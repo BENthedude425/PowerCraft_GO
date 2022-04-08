@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"embed"
+	"fmt"
 	"io/fs"
 	"net/http"
 )
@@ -26,7 +26,7 @@ func main() {
 		// The "/api" pattern matches everything, so we handle specific
 		// paths here that we're at the root here.
 		if req.URL.Path == "/api/test" {
-			fmt.Fprintf(w, "test successful",)
+			fmt.Fprintf(w, "test successful")
 		} else {
 			http.NotFound(w, req)
 			return
