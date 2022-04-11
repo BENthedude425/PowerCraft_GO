@@ -1,0 +1,87 @@
+.panel-background{
+    background-image: url("background2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .panel{
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    border: 3px inset rgba(245,245,245,0.35);
+    background-color: rgba(0,0,10, 0.85);
+    position: absolute;
+  }
+
+  .sidenav{
+    text-align: left;
+    overflow-x: hidden;
+    position: absolute;
+    color: white;
+    width: 5%;
+    height: 100%;
+    border-right: 3px solid rgba(245,245,245,0.35);
+  }
+
+
+  .sidenav div:hover {
+    background-color: grey;
+  }
+
+  .MainContainer{
+    position: relative;
+    height: 100%;
+    width: 95%;
+    transform: translate(5.5%,0);
+    color: white;
+    background-color: rgba(245,245,245,0.7);
+  }
+
+  .Console{
+    height: 65%;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: black;
+    border: solid black;
+    color: white;
+  }
+
+  .ConsoleInput{
+    width: 100%;
+    background-color: black;
+    color: white;
+  }
+
+  .SubContainer{
+    visibility: hidden;
+    width: 80%;
+    height: 50%;
+    padding: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    overflow-x: hidden;
+    border:rgba(0,0,10, 0.85) solid;
+
+    position: absolute;
+  }
+
+  .ServerButton{ 
+    color: white; 
+    width: fit-content;
+    border: none 5px;
+    height: auto;
+    width: 15%;
+  }
+
+  .ServerButton img{
+    width: 12%;
+  }
+  
+  .ServerButton b{
+    font-size: large;
+  }
