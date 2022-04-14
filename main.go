@@ -2,15 +2,33 @@ package main
 
 import (
 	"embed"
+	"flag"
 	"fmt"
 	"io/fs"
 	"net/http"
+	"os"
+	"runtime/debug"
 )
 
 //go:embed all:ui
 var ui embed.FS
 
 func main() {
+	// Parse command-line flags
+	flagVersion := flag.Bool("build", false, "print build information then exit")
+	flag.Parse()
+
+	// Handle build flag
+	if *flagVersion {
+		info, ok := debug.ReadBuildInfo()
+		if !ok {
+			fmt.Println("build info not found")
+			os.Exit(1)
+		}
+		fmt.Printf("%v", info)
+		os.Exit(0)
+	}
+
 	// Remove /ui/ prefix from ui embed FS
 	ui, _ := fs.Sub(ui, "ui")
 
