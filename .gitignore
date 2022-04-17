@@ -5,7 +5,12 @@
 *.so
 *.dylib
 
+# LOCAL environment for testing code
 /testenv
+
+
+# Config for powercraft functionality
+config.txt
 
 # Test binary, built with `go test -c`
 *.test

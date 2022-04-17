@@ -2,8 +2,6 @@ body, html{
     height: 100%;
 }
 
-
-
 * {
     box-sizing: border-box;
   }
@@ -37,7 +35,6 @@ body, html{
     width: 30%;
     margin-top: 5%;
     margin-left: 35%;
-    background-color: rgba(0,0,0, 0.5);
   }
 
   .container button{
@@ -45,6 +42,6 @@ body, html{
       margin-top: 5%;
   }
   .container input{
-    width: 100%;
+    width: 30%;
 
   }
